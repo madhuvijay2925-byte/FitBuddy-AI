@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}
+Workout Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        Workout Planner
+    </h1>
+
+    <p>
+        Enter your details to generate a 7-day plan.
+    </p>
+
+
+    <form
+        method="post"
+        action="/generate-workout"
+    >
+
+        <label>
+            Username
+        </label>
+
+        <input
+            name="username"
+            required
+        >
+
+
+        <label>
+            User ID
+        </label>
+
+        <input
+            name="user_id"
+            required
+        >
+
+
+        <label>
+            Age
+        </label>
+
+        <input
+            type="number"
+            name="age"
+            required
+        >
+
+
+        <label>
+            Weight
+        </label>
+
+        <input
+            type="number"
+            step="0.1"
+            name="weight"
+            required
+        >
+
+
+        <label>
+            Goal
+        </label>
+
+        <select name="goal">
+
+            <option>
+                Muscle Gain
+            </option>
+
+            <option>
+                Weight Loss
+            </option>
+
+            <option>
+                General Fitness
+            </option>
+
+        </select>
+
+
+        <label>
+            Intensity
+        </label>
+
+        <select name="intensity">
+
+            <option value="low">
+                Low
+            </option>
+
+            <option value="medium">
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+
+        </select>
+
+
+        <button>
+            Generate Plan
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

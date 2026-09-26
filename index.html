@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}
+FitBuddy - Home
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <h1>
+        AI Fitness Planner
+    </h1>
+
+    <p>
+        Create a personalized 7-day workout plan
+        with AI-powered nutrition guidance.
+    </p>
+
+</section>
+
+
+<div class="card">
+
+    <h2>
+        Create Your Plan
+    </h2>
+
+    <form
+        method="post"
+        action="/generate-workout"
+    >
+
+        <label>
+            Username
+        </label>
+
+        <input
+            type="text"
+            name="username"
+            required
+        >
+
+
+        <label>
+            User ID
+        </label>
+
+        <input
+            type="text"
+            name="user_id"
+            required
+        >
+
+
+        <label>
+            Age
+        </label>
+
+        <input
+            type="number"
+            name="age"
+            min="13"
+            max="100"
+            required
+        >
+
+
+        <label>
+            Weight (kg)
+        </label>
+
+        <input
+            type="number"
+            name="weight"
+            step="0.1"
+            required
+        >
+
+
+        <label>
+            Goal
+        </label>
+
+        <select
+            name="goal"
+            required
+        >
+
+            <option value="Muscle Gain">
+                Muscle Gain
+            </option>
+
+            <option value="Weight Loss">
+                Weight Loss
+            </option>
+
+            <option value="General Fitness">
+                General Fitness
+            </option>
+
+        </select>
+
+
+        <label>
+            Intensity
+        </label>
+
+        <select
+            name="intensity"
+            required
+        >
+
+            <option value="low">
+                Low
+            </option>
+
+            <option value="medium">
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+
+        </select>
+
+
+        <button type="submit">
+            Generate My Plan
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

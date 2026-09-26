@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+Feedback
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        Update Your Plan
+    </h1>
+
+    <p>
+        Tell FitBuddy what you want to change.
+    </p>
+
+
+    <form
+        method="post"
+        action="/submit-feedback"
+    >
+
+        <label>
+            User ID
+        </label>
+
+        <input
+            name="user_id"
+            required
+        >
+
+
+        <label>
+            Feedback
+        </label>
+
+        <textarea
+            name="feedback"
+            rows="6"
+            required
+            placeholder="Example: The workout is too difficult."
+        ></textarea>
+
+
+        <button>
+            Update Plan
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

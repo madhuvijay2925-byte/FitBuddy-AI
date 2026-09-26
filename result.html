@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}
+Your FitBuddy Plan
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        {% if updated %}
+            Updated Fitness Plan
+        {% else %}
+            Your Fitness Plan
+        {% endif %}
+    </h1>
+
+
+    <h3>
+        User:
+        {{ user.username }}
+    </h3>
+
+
+    <pre class="plan">
+{{ workout }}
+    </pre>
+
+
+    <h2>
+        Nutrition & Recovery Tip
+    </h2>
+
+    <div class="tip">
+        {{ nutrition_tip }}
+    </div>
+
+
+    {% if updated %}
+
+    <h2>
+        Your Feedback
+    </h2>
+
+    <div class="tip">
+        {{ feedback }}
+    </div>
+
+    {% endif %}
+
+
+    <a
+        class="button"
+        href="/feedback"
+    >
+        Give Feedback
+    </a>
+
+</div>
+
+{% endblock %}
