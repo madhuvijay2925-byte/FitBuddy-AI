@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1110;
+    color: #f1f5f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: #111b18;
+    border-bottom: 1px solid #24332f;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #b9c7c2;
+}
+
+.card {
+    background: #121c19;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #263732;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #344740;
+    background: #0c1412;
+    color: white;
+}
+
+button,
+.button {
+    margin-top: 18px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #3bb273;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.danger {
+    background: #c94c4c;
+}
+
+.plan {
+    white-space: pre-wrap;
+    background: #09100e;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.tip {
+    background: #192723;
+    padding: 18px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.error {
+    background: #512222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #30403a;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
